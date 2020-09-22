@@ -1,6 +1,6 @@
 {
     "name": "Asl10SoundSensor",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Library for using ASL sound sensor require IIC",
     "dependencies": {
         "ev3": "*"
