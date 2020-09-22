@@ -6,14 +6,34 @@ let counter = 0;
 
 forever(function () {
 
-    let id = sensors.asl10Sound1.getInfo();
+    // test om sensorere overhovedet er aktive. 
+    // se om andr ehar lykkedes at implementere ne i2c sensor i makecode.
 
 
-    for (let i = 0; i < id.length; i++) {
-        let x = i + 2;
-        brick.showNumber(id[i], x);
 
+
+    //let id = sensors.asl10Sound1.getInfo();
+
+
+
+    sensors.internal.transactionIIC(1, 8, [0, 0, 0, 0, 0, 0], 6);
+    
+    //let x = sensors.internal.getActiveSensors();
+    //
+
+
+    //sensors.internal.iicsensor.transaction(8, [0, 0, 0, 0, 0, 0], 6);
+    control.waitMicros(100000);
+    let buf = sensors.internal.getIICBytes(1, 6);
+
+    let text = sensors.internal.bufferToString(buf);
+
+    if (!text.compare("")) {
+        brick.showString("Ingen tekst!", 4);
     }
+
+    brick.showString(text, 3);
+
 
     /*
     sensors.internal.transactionIIC(1, 8, [0, 0, 0, 0, 0, 0], 4);

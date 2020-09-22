@@ -3,10 +3,11 @@ namespace sensors {
     class Asl10SoundSensor extends sensors.internal.IICSensor {
 
         getInfo(): number[] {
-            this.transaction(8, [256, 0, 256, 0, 256, 0], 6);
+            this.transaction(8, [5, 5, 5, 5, 5, 5], 6);
 
-            control.waitMicros(60000);
+            control.waitMicros(100000);
             let buf = this.getBytes();
+            
             let array = [0, 0, 0, 0, 0, 0]
             for (let i = 0; i < buf.length; i++) {
                 array[i] = buf[i];
