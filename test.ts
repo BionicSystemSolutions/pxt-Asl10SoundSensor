@@ -62,7 +62,7 @@ let angle = 0;
 forever(function () {
 
     // programmet kører cirka 30 gange i sekundet. 
-    angle = sensorstest.asl10Sound2.getAngle();
+    angle = sensors.asl10Sound2.angles();
 
     // forhindrer at den kører alt for hurtigt. Maks hastighed er her 75%. Angle kan sættes til en maks på 4, så vil den kunne nå 100% 
     if (angle > 3) { angle = 3; }
