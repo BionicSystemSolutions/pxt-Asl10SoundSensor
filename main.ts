@@ -1,5 +1,5 @@
-
 namespace sensors {
+
 
     export class Asl10SoundSensor extends sensors.internal.IICSensor {
 
@@ -21,8 +21,10 @@ namespace sensors {
         }
 
         // udregner "vinklen" udfra data
+
         //% block="asl10Sound at port $port"
         angles(): number {
+
 
             let buf = this.getData();
             let sumL = (buf[0] << 8) + (buf[1] & 0xff);
