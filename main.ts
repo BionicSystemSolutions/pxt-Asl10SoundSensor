@@ -1,6 +1,8 @@
 
+//% groups="['test1', `sensssors']"
+//% color=#909090 weight=80
 namespace sensorstest {
-    class Asl10SoundSensor extends sensors.internal.IICSensor {
+    export class Asl10SoundSensor extends sensors.internal.IICSensor {
 
         // constructor og _deviceType behøves ikke, men jeg så dog 
         // at andre lego sensorer har dem. 
@@ -20,6 +22,8 @@ namespace sensorstest {
         }
 
         // udregner "vinklen" udfra data
+
+        //% group=PID
         getAngle() {
 
             let buf = this.getData();
