@@ -1,7 +1,6 @@
-
-//% groups="['test1', `sensssors']"
-//% color=#909090 weight=80
+//% color="#AA278D" weight=100
 namespace sensorstest {
+    //% block
     export class Asl10SoundSensor extends sensors.internal.IICSensor {
 
         // constructor og _deviceType behøves ikke, men jeg så dog 
@@ -23,7 +22,7 @@ namespace sensorstest {
 
         // udregner "vinklen" udfra data
 
-        //% group=PID
+        //% block
         getAngle() {
 
             let buf = this.getData();
