@@ -1,15 +1,15 @@
-//% color="#AA278D" weight=100
-namespace sensorstest {
-    //% block
+namespace sensors {
+
+
     export class Asl10SoundSensor extends sensors.internal.IICSensor {
 
         // constructor og _deviceType behøves ikke, men jeg så dog 
         // at andre lego sensorer har dem. 
-        /*
+
         constructor(port: number) {
             super(port)
 
-        }*/
+        }
         /*_deviceType() {
             return DAL.DEVICE_TYPE_NXT_IIC
         }*/
@@ -22,8 +22,9 @@ namespace sensorstest {
 
         // udregner "vinklen" udfra data
 
-        //% block
-        getAngle() {
+        //% block="asl10Sound at port $port"
+        angles(): number {
+
 
             let buf = this.getData();
             let sumL = (buf[0] << 8) + (buf[1] & 0xff);
@@ -51,16 +52,22 @@ namespace sensorstest {
             return a2;
         }
 
-    // denne skal sende sensor id, den virker dog kun hvis der står lego i den.
-    // måske en sammenhæng mellem det og at internal.sensors.readIICID() læses til
-    // LegoTempStore%s
+        // denne skal sende sensor id, den virker dog kun hvis der står lego i den.
+        // måske en sammenhæng mellem det og at internal.sensors.readIICID() læses til
+        // LegoTempStore%s
         _IICId() {
-            return 'LEGO'; 
+            return 'LEGO';
         }
     }
-
+    //% fixedInstance whenUsed block="1" jres=icons.port1
     export const asl10Sound1 = new Asl10SoundSensor(1)
+
+    //% fixedInstance whenUsed block="2" jres=icons.port2
     export const asl10Sound2 = new Asl10SoundSensor(2)
+
+    //% fixedInstance whenUsed block="3" jres=icons.port3
     export const asl10Sound3 = new Asl10SoundSensor(3)
+
+    //% fixedInstance whenUsed block="4" jres=icons.port4
     export const asl10Sound4 = new Asl10SoundSensor(4)
 }
