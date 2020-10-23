@@ -73,6 +73,8 @@ forever(function () {
     // bemærk at der er forskellige thresholds for rotation mod højre end venstre
     // Skal testes om de også skal være forskellig med en sensor, vi ved virker.
     // thresholds'ne er optimeret til at virke med tale. Kan muligvis være lavere.
+
+/*
     if (angle > thresholdRight) {
         motors.largeBC.tank(-speed, speed);
     } else if (angle < -thresholdLeft) { // thresholdL
@@ -80,6 +82,8 @@ forever(function () {
     } else {
         motors.stopAll();
     }
+*/
+
 
     brick.showValue("Angle", angle, 4);
 

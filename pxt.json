@@ -1,5 +1,5 @@
 {
-    "name": "Asl10SoundSensor",
+    "name": "Asl10Sensor",
     "version": "0.0.4",
     "description": "Library for using ASL sound sensor require IIC",
     "dependencies": {
@@ -7,7 +7,8 @@
     },
     "files": [
         "README.md",
-        "main.ts"
+        "main.ts",
+        "Asl10.ts"
     ],
     "testFiles": [
         "test.ts"
