@@ -1,4 +1,4 @@
- namespace sensors {
+ namespace asl10 {
 
     export class Asl10DataModel {
         angle: number;
