@@ -1,11 +1,11 @@
  namespace asl10 {
 
-    export class Asl10DataModel {
+    export class Asl10Model {
         angle: number;
         power: number;
     }
 
-    export class Asl10SoundSensor extends sensors.internal.IICSensor {
+    export class Asl10Sensor extends sensors.internal.IICSensor {
 
         constructor(port: number) {
             super(port)
@@ -17,7 +17,7 @@
             return DAL.DEVICE_TYPE_NXT_IIC
         }
 
-        getData(): Asl10DataModel {
+        getData(): Asl10Model {
             this.transaction(8, [0], 6);
             let buf = this.getBytes();
 
@@ -37,7 +37,7 @@
                 power = null;
             }
 
-            let data: Asl10DataModel = {
+            let data: Asl10Model = {
                 angle: angle,
                 power: power
             }
