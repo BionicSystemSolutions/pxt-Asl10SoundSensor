@@ -14,9 +14,11 @@ Thereafter you can use the drivetank block to control a tank robot. You can also
 
 ## Supported targets
 
-* for PXT/linux
-* for PXT/ev3
 
+* for PXT/linux
+
+* for PXT/ev3
+(The metadata above is needed for package search.)
 ## License
 
 MIT
@@ -36,9 +38,3 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 - [ ] Get your package reviewed and approved https://makecode.mindstorms.com/packages/approval
 
 Read more at https://makecode.mindstorms.com/packages/build-your-own
-
-## License
-
-MIT
-
-

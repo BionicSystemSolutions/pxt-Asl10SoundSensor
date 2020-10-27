@@ -1,5 +1,3 @@
-
-
 forever(function () {
 
     aslsensor.asl10Sound2.update();
