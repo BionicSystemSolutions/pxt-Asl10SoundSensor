@@ -14,6 +14,7 @@ Thereafter you can use the drivetank block to control a tank robot. You can also
 
 ## Supported targets
 
+* for PXT/linux
 * for PXT/ev3
 
 ## License
