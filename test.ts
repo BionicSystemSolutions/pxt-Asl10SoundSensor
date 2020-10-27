@@ -67,6 +67,7 @@ forever(function () {
     // programmet kører cirka 30 gange i sekundet. 
     angle = aslsensor.asl10Sound2.angle() / aslsensor.asl10Sound2.power();
 
+
     // forhindrer at den kører alt for hurtigt. Maks hastighed er her 75%. Angle kan sættes til en maks på 4, så vil den kunne nå 100% 
     if (angle > 3) { angle = 3; }
     if (angle < -3) { angle = -3; }
