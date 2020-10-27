@@ -3,11 +3,12 @@
     "version": "0.0.6",
     "description": "Library for using ASL sound sensor require IIC",
     "dependencies": {
-        "ev3": "*"
+        "ev3": "*",
+        "automation": "github:microsoft/pxt-automation#v0.0.3"
     },
     "files": [
         "README.md",
-        "main.ts"
+        "asl10sensor.ts"
     ],
     "testFiles": [
         "test.ts"
