@@ -36,9 +36,3 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 - [ ] Get your package reviewed and approved https://makecode.mindstorms.com/packages/approval
 
 Read more at https://makecode.mindstorms.com/packages/build-your-own
-
-## License
-
-MIT
-
-
