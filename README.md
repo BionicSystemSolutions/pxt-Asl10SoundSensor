@@ -22,11 +22,8 @@ To use driveTank in typescript following enums are used:
 
 ## Supported targets
 
-
-* for PXT/linux
-
 * for PXT/ev3
-(The metadata above is needed for package search.)
+
 ## License
 
 MIT
@@ -38,7 +35,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 ## TODO
 
-- [ ] Add a reference for your blocks here
+- [x] Add a reference for your blocks here
 - [x] Add "icon.png" image (300x200) in the root folder
 - [x] Add "- beta" to the GitHub project description if you are still iterating it.
 - [x] Turn on your automated build on https://travis-ci.org
