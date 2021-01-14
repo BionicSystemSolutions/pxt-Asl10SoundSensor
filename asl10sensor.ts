@@ -55,7 +55,7 @@ namespace aslsensor {
             let sumRight = (buf[2] << 8) + (buf[3] & 0xff);
             let sumTotal = (buf[4] << 8) + (buf[5] & 0xff);
 
-            let angle = sumRight - sumLeft;
+            let angle = sumLeft - sumRight;
             // Check for corruptet bytes
             if (angle < -2000 || angle > 2000) {
                 angle = 0;
