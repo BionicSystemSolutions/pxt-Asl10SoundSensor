@@ -22,6 +22,7 @@ To use driveTank in typescript following enums are used:
 
 ## Supported targets
 
+* for PXT/linux
 * for PXT/ev3
 
 ## License
