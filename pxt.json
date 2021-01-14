@@ -3,16 +3,15 @@
     "version": "0.0.6",
     "description": "Library for using ASL sound sensor require IIC",
     "dependencies": {
-        "ev3": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
-        "main.ts"
+        "asl10sensor.ts"
     ],
     "testFiles": [
         "test.ts"
     ],
-    "public": false,
-    "license": "MIT",
-    "installedVersion": "workspace:9bb079de-4b75-4c09-704e-61c11527d287"
+    "public": true,
+    "license": "MIT"
 }
