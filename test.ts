@@ -2,6 +2,5 @@ forever(function () {
 
     aslsensor.asl10Sound2.update();
 
-    aslsensor.asl10Sound2.driveTank(motorEnumASL.BC)
-
+    aslsensor.asl10Sound2.driveTank(aslsensor.MotorEnumASL.BC)
 })
