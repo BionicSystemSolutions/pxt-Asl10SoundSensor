@@ -1,17 +1,17 @@
-enum motorEnumASL {
-    //% block="B+C" jres=icons.portBC
-    BC = 1,
-    //% block="A+B" jres=icons.portAB
-    AB = 2,
-    //% block="C+D" jres=icons.portCD
-    CD = 3,
-    //% block="A+D" jres=icons.portAD
-    AD = 4
-}
-
 //% color="#3BF52A" weight=92 icon="\uf10f"
 //% groups=["Methods", "Getters", "Others"]
 namespace aslsensor {
+
+    export enum MotorEnumASL {
+        //% block="B+C" jres=icons.portBC
+        BC = 1,
+        //% block="A+B" jres=icons.portAB
+        AB = 2,
+        //% block="C+D" jres=icons.portCD
+        CD = 3,
+        //% block="A+D" jres=icons.portAD
+        AD = 4
+    }
 
     const dt = 0.0050;
 
@@ -20,8 +20,8 @@ namespace aslsensor {
         angleVal: number;
         powerVal: number;
 
-        sumLVal: number;
-        sumRVal: number;
+        sumLeftVal: number;
+        sumRightVal: number;
 
         intgr: number;
         angleTank: number;
@@ -46,26 +46,26 @@ namespace aslsensor {
             this.transaction(8, [0], 6);
             let buf = this.getBytes();
 
-            let sumL = (buf[0] << 8) + (buf[1] & 0xff);
-            let sumR = (buf[2] << 8) + (buf[3] & 0xff);
-            let sumX = (buf[4] << 8) + (buf[5] & 0xff);
+            let sumLeft = (buf[0] << 8) + (buf[1] & 0xff);
+            let sumRight = (buf[2] << 8) + (buf[3] & 0xff);
+            let sumTotal = (buf[4] << 8) + (buf[5] & 0xff);
 
-            let angle = sumR - sumL;
+            let angle = sumRight - sumLeft;
             // Check for corruptet bytes
             if (angle < -2000 || angle > 2000) {
                 angle = 0;
             }
 
             // Check for corruptet bytes
-            let power = sumX;
+            let power = sumTotal;
             if (power < -6000 || power > 6000) {
                 power = 0;
             }
 
             this.angleVal = angle;
             this.powerVal = power;
-            this.sumLVal = sumL;
-            this.sumRVal = sumR;
+            this.sumLeftVal = sumLeft;
+            this.sumRightVal = sumRight;
 
         }
 
@@ -92,11 +92,11 @@ namespace aslsensor {
             return this.powerVal;
         }
 
-        private sumL(): number {
-            return this.sumLVal;
+        private sumLeft(): number {
+            return this.sumLeftVal;
         }
-        private sumR(): number {
-            return this.sumRVal;
+        private sumRight(): number {
+            return this.sumRightVal;
         }
 
         //% block="driveTank on **sensor port** %this tanking **motors** $motorsUsed"
@@ -106,7 +106,7 @@ namespace aslsensor {
         //% weight=150
         //% inlineInputMode=inline
         //% group="Methods"
-        driveTank(motorsUsed: motorEnumASL) {
+        driveTank(motorsUsed: MotorEnumASL) {
 
             let angleValue = this.angleVal;
 

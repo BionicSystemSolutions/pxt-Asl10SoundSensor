@@ -31,14 +31,3 @@ MIT
 ## Code of Conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-
-## TODO
-
-- [x] Add a reference for your blocks here
-- [x] Add "icon.png" image (300x200) in the root folder
-- [x] Add "- beta" to the GitHub project description if you are still iterating it.
-- [ ] Use "pxt bump" to create a tagged release on GitHub
-- [ ] Get your package reviewed and approved https://makecode.mindstorms.com/packages/approval
-
-Read more at https://makecode.mindstorms.com/packages/build-your-own
