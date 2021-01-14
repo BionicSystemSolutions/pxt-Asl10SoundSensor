@@ -12,7 +12,7 @@
     "testFiles": [
         "test.ts"
     ],
-    "public": false,
+    "public": true,
     "license": "MIT",
     "installedVersion": "workspace:9bb079de-4b75-4c09-704e-61c11527d287"
 }

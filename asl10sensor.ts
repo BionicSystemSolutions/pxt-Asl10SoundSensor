@@ -9,13 +9,9 @@ enum motorEnumASL {
     AD = 4
 }
 
-
 //% color="#3BF52A" weight=92 icon="\uf10f"
-//% groups=['Methods', 'Getters', 'Others']
+//% groups=["Methods", "Getters", "Others"]
 namespace aslsensor {
-
-
-
 
     const dt = 0.0050;
 
@@ -37,7 +33,6 @@ namespace aslsensor {
         /*_deviceType() {
             return DAL.DEVICE_TYPE_NXT_IIC
         }*/
-
 
         //% help=aslsensor/update
         //% block="update **sensor port** %this|asl10"
@@ -97,23 +92,10 @@ namespace aslsensor {
             return this.powerVal;
         }
 
-        //% block="sumL **sensor port** %this|asl10"
-        //% parts="asl10"
-        //% blockNamespace=aslsensor
-        //% this.fieldEditor="ports"
-        //% weight=100
-        //% group="others"
-        sumL(): number {
+        private sumL(): number {
             return this.sumLVal;
         }
-
-        //% block="sumR **sensor port** %this|asl10"
-        //% parts="asl10"
-        //% blockNamespace=aslsensor
-        //% this.fieldEditor="ports"
-        //% weight=99
-        //% group="others"
-        sumR(): number {
+        private sumR(): number {
             return this.sumRVal;
         }
 
