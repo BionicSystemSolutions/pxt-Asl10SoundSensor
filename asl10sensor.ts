@@ -26,8 +26,11 @@ namespace aslsensor {
         intgr: number;
         angleTank: number;
 
+        portVal: number;
+
         constructor(port: number) {
             super(port)
+            this.portVal = port-1;
         }
 
         /*_deviceType() {
@@ -43,8 +46,10 @@ namespace aslsensor {
         //% weight=500
         //% group="Methods"
         update() {
-            this.transaction(8, [0], 6);
-            let buf = this.getBytes();
+            //this.transaction(8, [0], 6);
+            //let buf = this.getBytes();
+            sensors.internal.transactionIIC(1, 8, [], 6)
+            let buf = sensors.internal.getIICBytes(1, 6);
 
             let sumLeft = (buf[0] << 8) + (buf[1] & 0xff);
             let sumRight = (buf[2] << 8) + (buf[3] & 0xff);
