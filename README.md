@@ -4,7 +4,7 @@ Block for using the ASL10SoundSensor
 
 ## How to import this library?
 
-Click the gearwheel menu in the MakeCode editor, and click "Extensions"m search for "asl10" and select it.
+Click the gearwheel menu in the MakeCode editor, and click "Extensions" search for "asl10" and select it.
 
 ## Using the blocks
 
@@ -38,7 +38,6 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 - [x] Add a reference for your blocks here
 - [x] Add "icon.png" image (300x200) in the root folder
 - [x] Add "- beta" to the GitHub project description if you are still iterating it.
-- [x] Turn on your automated build on https://travis-ci.org
 - [ ] Use "pxt bump" to create a tagged release on GitHub
 - [ ] Get your package reviewed and approved https://makecode.mindstorms.com/packages/approval
 
