@@ -3,7 +3,8 @@
     "version": "0.0.11",
     "description": "Library for using ASL sound sensor require IIC",
     "dependencies": {
-        "ev3": "*"
+        "ev3": "*",
+        "Asl10SoundSensor": "workspace:dd33c5eb-8aba-4252-97f4-cefac2c2a7ef"
     },
     "files": [
         "README.md",
@@ -14,5 +15,5 @@
     ],
     "public": true,
     "license": "MIT",
-    "installedVersion": "workspace:9bb079de-4b75-4c09-704e-61c11527d287"
+    "installedVersion": "workspace:dd33c5eb-8aba-4252-97f4-cefac2c2a7ef"
 }

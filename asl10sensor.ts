@@ -24,13 +24,13 @@ namespace aslsensor {
         sumRightVal: number;
 
         intgr: number;
-        angleTank: number;
+
 
         portVal: number;
 
         constructor(port: number) {
             super(port)
-            this.portVal = port-1;
+            this.portVal = port - 1;
         }
 
         /*_deviceType() {
@@ -111,16 +111,14 @@ namespace aslsensor {
         //% weight=150
         //% inlineInputMode=inline
         //% group="Methods"
+        // Test
         driveTank(motorsUsed: MotorEnumASL) {
 
-            let gain = 1.1;
             let angleValue = this.angleVal;
 
             this.intgr = this.intgr + angleValue * dt;
 
-            this.angleTank = 0.8 * this.angleTank + 0.2 * angleValue;
-
-            let speed = gain * (0.2 * angleValue + 0.005 * this.intgr);
+            let speed = (0.35 * angleValue + 0.006 * this.intgr);
 
             if (speed < -50) {
                 speed = -50;
