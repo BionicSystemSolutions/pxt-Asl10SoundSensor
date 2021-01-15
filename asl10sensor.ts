@@ -111,15 +111,15 @@ namespace aslsensor {
         //% weight=150
         //% inlineInputMode=inline
         //% group="Methods"
-        driveTank(motorsUsed: MotorEnumASL) {
+        driveTank(gain: number, motorsUsed: MotorEnumASL) {
 
             let angleValue = this.angleVal;
 
             this.intgr = this.intgr + angleValue * dt;
 
-            this.angleTank = 0.5 * this.angleTank + 0.5 * angleValue;
+            this.angleTank = 0.8 * this.angleTank + 0.2 * angleValue;
 
-            let speed = 0.2 * angleValue + 0.005 * this.intgr;
+            let speed = gain * (0.2 * angleValue + 0.005 * this.intgr);
 
             if (speed < -50) {
                 speed = -50;
